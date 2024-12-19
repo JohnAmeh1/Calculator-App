@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container max-w-md mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4">Simple Calculator App</h1>
+    <div class="calculator bg-gray-200 rounded-lg shadow-lg p-6 mx-auto max-w-md">
+        <div class="display bg-white p-4 rounded mb-4 text-right text-2xl font-mono" id="display">0</div>
+        <div class="grid grid-cols-4 gap-2">
+            <button class="btn bg-red-500 text-white" onclick="clearDisplay()">C</button>
+            <button class="btn bg-yellow-500 text-white" onclick="deleteLast()">DEL</button>
+            <button class="btn bg-gray-400 text-white" onclick="appendOperator('/')">/</button>
+            <button class="btn bg-gray-400 text-white" onclick="appendOperator('*')">*</button>
+            <button class="btn bg-gray-300" onclick="appendNumber(7)">7</button>
+            <button class="btn bg-gray-300" onclick="appendNumber(8)">8</button>
+            <button class="btn bg-gray-300" onclick="appendNumber(9)">9</button>
+            <button class="btn bg-gray-400 text-white" onclick="appendOperator('-')">-</button>
+            <button class="btn bg-gray-300" onclick="appendNumber(4)">4</button>
+            <button class="btn bg-gray-300" onclick="appendNumber(5)">5</button>
+            <button class="btn bg-gray-300" onclick="appendNumber(6)">6</button>
+            <button class="btn bg-gray-400 text-white" onclick="appendOperator('+')">+</button>
+            <button class="btn bg-gray-300" onclick="appendNumber(1)">1</button>
+            <button class="btn bg-gray-300" onclick="appendNumber(2)">2</button>
+            <button class="btn bg-gray-300" onclick="appendNumber(3)">3</button>
+            <button class="btn bg-blue-500 text-white row-span-2" onclick="calculate()">=</button>
+            <button class="btn bg-gray-300" onclick="appendNumber(0)">0</button>
+            <button class="btn bg-gray-300" onclick="appendDot()">.</button>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
